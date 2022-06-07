@@ -7,7 +7,7 @@
         private static BinaryReader? br;
         private static BinaryWriter? bw;
         
-        private static readonly int crcOffset = 0xd424;
+        private static readonly int crcOffset = 0x16268;
 
         public static void Main(string[] args)
         {
