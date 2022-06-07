@@ -9,7 +9,6 @@
 
         public static void Main(string[] args)
         {
-            Console.WriteLine(args.Length);
             if(args.Length == 0 || args.Length > 1)
             {
                 Console.WriteLine($"No files found");
