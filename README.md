@@ -1,5 +1,5 @@
 # FFX2CalculateCheckSum
-FFX2 HD remaster SaveFile, CalculateCheckSum
+FFX, FFX-2 HD Remaster PC save, CalculateCheckSum
 
 NOT TESTED
 
