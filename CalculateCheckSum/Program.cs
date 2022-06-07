@@ -9,7 +9,13 @@
 
         public static void Main(string[] args)
         {
-            string saveFile = $"{args}";
+            Console.WriteLine(args.Length);
+            if(args.Length == 0 || args.Length > 1)
+            {
+                Console.WriteLine($"No files found");
+                return;
+            }
+            string saveFile = Path.GetFullPath(args[0]);
             MemoryStream saveStream = new MemoryStream(File.ReadAllBytes(saveFile));
             ms = saveStream;
             br = new BinaryReader(ms);

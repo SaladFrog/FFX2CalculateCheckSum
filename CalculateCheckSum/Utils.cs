@@ -2,11 +2,6 @@
 {
     public static class Utils
     {
-        public static double RadianToDegree(double angle)
-        {
-            return angle * (180.0 / Math.PI);
-        }
-
         public static byte[] BoolsToBytes(bool[] bools)
         {
             var bytes = new byte[bools.Length / 8];
