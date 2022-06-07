@@ -2,21 +2,31 @@
 {
     public class Program
     {
+        private static string saveFile;
         private static MemoryStream? ms;
         private static BinaryReader? br;
         private static BinaryWriter? bw;
+        
         private static readonly int crcOffset = 0xd424;
 
         public static void Main(string[] args)
         {
             if(args.Length == 0 || args.Length > 1)
             {
-                Console.WriteLine($"No files found");
+                Console.WriteLine($"args empty");
                 return;
             }
-            string saveFile = Path.GetFullPath(args[0]);
-            MemoryStream saveStream = new MemoryStream(File.ReadAllBytes(saveFile));
-            ms = saveStream;
+
+            try
+            {
+                saveFile = Path.GetFullPath(args[0]);
+                ms = new MemoryStream(File.ReadAllBytes(saveFile));
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            
             br = new BinaryReader(ms);
             bw = new BinaryWriter(ms);
 
